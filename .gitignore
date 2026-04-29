@@ -13,3 +13,13 @@
 **/.DS_Store/
 .vscode
 .idea
+geoguessr_filtered_data/
+geoguessr_50k_data/
+google_street_view_data/
+unified_dataset/
+sun_attributes/
+__pycache__/
+*.pyc
+.DS_Store
+Classifier Code.zip
+main-classifier/data/
