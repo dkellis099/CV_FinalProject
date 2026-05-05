@@ -1,14 +1,3 @@
-"""
-CSCI 1430 — Homework 5: Vision Transformers and Self-Supervised Learning
-
-Main entry point. Run tasks with:
-    uv run python main.py --task t0_attention
-    uv run python main.py --task t1_endtoend
-    uv run python main.py --task t2_rotation
-    uv run python main.py --task t3_dino
-    uv run python main.py --task t4_transfer
-"""
-
 import os
 import argparse
 from collections import namedtuple
@@ -16,8 +5,9 @@ from collections import namedtuple
 import torch
 
 import encoders as encoders
+import utils as utils
 import hyperparameters as hp
-from tasks import t4_transfer
+from tasks import geoguessr
 
 # ============================================================================
 # Output file tracking
@@ -46,10 +36,9 @@ APPROACHES = {
 # ============================================================================
 
 def main():
-    parser = argparse.ArgumentParser(description='HW5: Self-Supervised Learning')
+    parser = argparse.ArgumentParser(description='Final Project: Geoguessr Model')
     parser.add_argument('--task', type=str, required=True,
-                        choices=['t0_attention', 't1_endtoend',
-                                 't2_rotation', 't3_dino', 't4_transfer'],
+                        choices=['geoguessr'],
                         help='Which task to run.')
     parser.add_argument('--data', type=str,
                         default=os.path.join(os.path.dirname(__file__), '..', 'data'),
@@ -59,16 +48,16 @@ def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f"Device: {device}")
     print(f"Task: {args.task}")
-    print(f"BANNER_ID: {encoders.BANNER_ID}")
-    torch.manual_seed(encoders.BANNER_ID)
+    print(f"SEED: {encoders.SEED}")
+    torch.manual_seed(encoders.SEED)
 
-    if args.task == 't4_transfer':
-        classify_data = encoders.SceneDataset(
-            os.path.join(args.data, '15-scenes-csci1430'),
-            image_size=hp.TRANSFER_IMAGE_SIZE,
-            batch_size=hp.TRANSFER_BATCH_SIZE,
+    if args.task == 'geoguessr':
+        classify_data = utils.SceneDataset(
+            os.path.join(os.path.dirname(__file__), '50k_data'),
+            image_size=hp.IMAGE_SIZE,
+            batch_size=hp.BATCH_SIZE,
         )
-        t4_transfer(classify_data, device, APPROACHES, args.data)
+        geoguessr(classify_data, device, APPROACHES, args.data)
 
     print(f"\nTask {args.task} complete.")
 

@@ -1,10 +1,3 @@
-"""
-Provided task drivers for HW5 (do not modify).
-
-Task 0: Attention visualization — loads models, calls student.visualize_attention().
-Task 4: Transfer evaluation — runs 5 probe experiments, generates attention comparison.
-"""
-
 import os
 from PIL import Image
 
@@ -14,25 +7,22 @@ import torch.nn as nn
 import torchvision.transforms as transforms
 
 import encoders as encoders
+import utils as utils
 import hyperparameters as hp
-from helpers import create_vit_tiny, load_dinov3_encoder, load_resnet50_encoder, load_clip_encoder, load_convnext_encoder
-
-# ============================================================================
-# Task 4: Transfer evaluation
-# ============================================================================
+from helpers import load_dinov3_encoder, load_resnet50_encoder, load_clip_encoder, load_convnext_encoder
 
 frozen_dino = 0
 frozen_resnet = 0
 frozen_clip = 0
-frozen_convnext = 1
+frozen_convnext = 0
 last_block_dino = 0
 last_block_resnet = 0
 last_block_clip = 0
-last_block_convnext = 1
+last_block_convnext = 0
 lora_dino = 0
-lora_clip = 0
+lora_clip = 1
 
-def t4_transfer(classify_data, device, approaches, data_dir):
+def geoguessr(classify_data, device, approaches, data_dir):
     """Run transfer probes and attention map comparison."""
     num_classes = classify_data.num_classes
 
@@ -118,13 +108,12 @@ def t4_transfer(classify_data, device, approaches, data_dir):
     if lora_clip:
         print("\n=== LoRA Clip probe ===")
         clip_encoder, clip_dim = load_clip_encoder(device=device)
-        model = encoders.GeoEncoder(nn.Linear(clip_dim, num_classes),
-                                encoder=clip_encoder, lora=True).to(device)
+        model = encoders.GeoEncoder(encoder=clip_encoder, lora=True, device=device).to(device)
         optimizer = torch.optim.Adam([
             {"params": model.head.parameters(), "lr": hp.TRANSFER_HEAD_LR},
             {"params": [p for n, p in model.encoder.named_parameters() if p.requires_grad], "lr": hp.LORA_LR},
         ])
-        train_accs, val_accs = encoders.train_loop(
+        train_accs, val_accs = utils.train_loop(
             model, classify_data.train_loader, optimizer,
             nn.CrossEntropyLoss(), hp.TRANSFER_EPOCHS, device,
             val_loader=classify_data.val_loader, tasklabel="LoRA-Clip")
@@ -212,43 +201,3 @@ def t4_transfer(classify_data, device, approaches, data_dir):
         np.save(approaches['convnext_last_block'].curve_train, train_accs)
         np.save(approaches['convnext_last_block'].curve_val, val_accs)
         torch.save(model.head.state_dict(), approaches['convnext_last_block'].weights)
-
-
-
-
-
-
-
-    # # --- Attention map comparison on high-res test images ---
-    # print("\n=== Attention map comparison ===")
-    # to_tensor = transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor()])
-    # img_dir = os.path.join(data_dir, 'highres-images')
-    # sample_paths = sorted([
-    #     os.path.join(img_dir, f) for f in os.listdir(img_dir)
-    #     if f.endswith(('.jpg', '.png'))
-    # ]) if os.path.isdir(img_dir) else []
-
-    # # Load all encoders for comparison
-    # random_enc, _ = create_vit_tiny()
-    # random_enc.eval()
-    # rotation_enc, _ = create_vit_tiny()
-    # rotation_enc.load_state_dict(
-    #     torch.load(approaches['rotation'].weights, weights_only=True, map_location='cpu'))
-    # rotation_enc.eval()
-    # dino_enc, _ = create_vit_tiny()
-    # dino_enc.load_state_dict(
-    #     torch.load(approaches['dino'].weights, weights_only=True, map_location='cpu'))
-    # dino_enc.eval()
-
-    # for img_path in sample_paths[:3]:
-    #     img_name = os.path.splitext(os.path.basename(img_path))[0]
-    #     tensor = to_tensor(Image.open(img_path).convert('RGB')).unsqueeze(0).to(device)
-
-    #     for label, enc in [('random', random_enc), ('rotation', rotation_enc),
-    #                        ('dino', dino_enc), ('dinov3', dinov3_encoder)]:
-    #         student.visualize_attention(
-    #             enc, tensor, os.path.join('results', f'compare_{img_name}_fade_{label}.png'),
-    #             style='fade', device=device)
-    #         student.visualize_attention(
-    #             enc, tensor, os.path.join('results', f'compare_{img_name}_gray_{label}.png'),
-    #             style='gray', device=device)

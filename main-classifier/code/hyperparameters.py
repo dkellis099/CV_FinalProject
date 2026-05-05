@@ -5,56 +5,12 @@ You may modify these values to improve your results.
 """
 
 # ============================================================================
-# Task 1: End-to-End ViT Classification
-# ============================================================================
-ENDTOEND_IMAGE_SIZE = 224
-ENDTOEND_EPOCHS = 20
-ENDTOEND_LR = 1e-4
-ENDTOEND_BATCH_SIZE = 32
-ENDTOEND_WEIGHT_DECAY = 0.01
-
-# ============================================================================
-# Task 2: Rotation Prediction
-# ============================================================================
-ROTATION_CROP_SIZE = 224
-ROTATION_NUM_CROPS = 50_000
-ROTATION_EPOCHS = 15
-ROTATION_LR = 1e-4
-ROTATION_BATCH_SIZE = 32
-ROTATION_WEIGHT_DECAY = 0.01
-
-# ============================================================================
-# Task 3: Mini-DINO Pretraining
-# ============================================================================
-DINO_EPOCHS = 50
-DINO_LR = 3e-5
-DINO_BATCH_SIZE = 32              # Small — only 2 high-res images in dataset
-
-# Multi-crop sizes
-DINO_GLOBAL_CROP_SIZE = 224       # Resolution of global crops
-DINO_LOCAL_CROP_SIZE = 96        # Resolution of local crops
-DINO_NUM_LOCAL_CROPS = 300          # Number of local crops per image
-DINO_NUM_SAMPLES = 500
-
-# Projection head
-DINO_HIDDEN_DIM = 256             # Hidden dimension of projection MLP
-DINO_OUT_DIM = 4096               # Output dimension K (the "vocabulary" size)
-
-# Temperatures
-DINO_STUDENT_TEMP = 0.1           # Student temperature (fixed)
-DINO_TEACHER_TEMP = 0.04          # Teacher temperature (sharpening)
-
-# EMA momentum for teacher update
-DINO_EMA_MOMENTUM = 0.996
-DINO_PRETRAINED = True
-
-# ============================================================================
 # Task 4: Transfer Evaluation
 # ============================================================================
-TRANSFER_IMAGE_SIZE = 224
 TRANSFER_EPOCHS = 15
 TRANSFER_HEAD_LR = 1e-3           # Learning rate for linear head
 TRANSFER_ENCODER_LR = 1e-5        # Learning rate for encoder (finetuning only)
-TRANSFER_BATCH_SIZE = 32
 TRANSFER_WEIGHT_DECAY = 0.01
 LORA_LR = 1e-4
+BATCH_SIZE = 32
+IMAGE_SIZE = 224

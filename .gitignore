@@ -22,4 +22,15 @@ __pycache__/
 *.pyc
 .DS_Store
 Classifier Code.zip
-main-classifier/data/
+main-classifier/data
+main-classifier/code/continent_tensors_5000_split
+main-classifier/code/continent_tensors_11000_split
+main-classifier/code/50k_data
+*.pt
+*.png
+data/
+data
+main-classifier/code/results
+*.err
+*.pth
+model_weights/best_biome_clip_lora.pth
