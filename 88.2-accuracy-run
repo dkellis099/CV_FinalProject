@@ -1,0 +1,45 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 2371609
+##  Job Name : geoguessr
+##  Nodelist : gpu2107
+##      CPUs : 4
+##  Mem/Node : 16384 MB
+## Directory : /oscar/home/spweiss/CV_FinalProject/main-classifier/code
+##   Job Started : Wed May  6 10:29:16 AM EDT 2026
+###############################################################################
+============================================
+Job ID:    2371609
+Task:      geoguessr
+Node:      gpu2107.oscar.ccv.brown.edu
+Started:   Wed May  6 10:29:16 AM EDT 2026
+GPU: NVIDIA GeForce RTX 3090
+============================================
+Device: cuda
+Task: geoguessr
+SEED: 1865415
+
+=== LoRA Clip probe ===
+Downloading Clip model (first time only)...
+Downloading/Loading OpenAI CLIP backbone...
+Downloading Clip model (first time only)...
+[LoRA-Clip] Epoch 1/15  Train: 0.762  Loss: 0.6770  Val: 0.831  Time: 455.065
+[LoRA-Clip] Epoch 2/15  Train: 0.853  Loss: 0.4249  Val: 0.846  Time: 454.160
+[LoRA-Clip] Epoch 3/15  Train: 0.879  Loss: 0.3537  Val: 0.858  Time: 454.051
+[LoRA-Clip] Epoch 4/15  Train: 0.897  Loss: 0.3033  Val: 0.861  Time: 454.080
+[LoRA-Clip] Epoch 5/15  Train: 0.910  Loss: 0.2623  Val: 0.870  Time: 453.602
+[LoRA-Clip] Epoch 6/15  Train: 0.924  Loss: 0.2256  Val: 0.876  Time: 453.569
+[LoRA-Clip] Epoch 7/15  Train: 0.935  Loss: 0.1911  Val: 0.873  Time: 453.592
+[LoRA-Clip] Epoch 8/15  Train: 0.946  Loss: 0.1615  Val: 0.878  Time: 453.767
+[LoRA-Clip] Epoch 9/15  Train: 0.954  Loss: 0.1344  Val: 0.880  Time: 453.712
+[LoRA-Clip] Epoch 10/15  Train: 0.962  Loss: 0.1122  Val: 0.877  Time: 453.886
+[LoRA-Clip] Epoch 11/15  Train: 0.968  Loss: 0.0937  Val: 0.875  Time: 453.728
+[LoRA-Clip] Epoch 12/15  Train: 0.973  Loss: 0.0785  Val: 0.871  Time: 454.173
+[LoRA-Clip] Epoch 13/15  Train: 0.977  Loss: 0.0669  Val: 0.882  Time: 454.024
+[LoRA-Clip] Epoch 14/15  Train: 0.981  Loss: 0.0560  Val: 0.878  Time: 454.283
+[LoRA-Clip] Epoch 15/15  Train: 0.984  Loss: 0.0496  Val: 0.873  Time: 454.247
+[LoRA-Clip] Total Time: 6809.939  Average Time: 453.9959
+
+Task geoguessr complete.
+============================================
+Finished:  Wed May  6 12:23:38 PM EDT 2026
+============================================

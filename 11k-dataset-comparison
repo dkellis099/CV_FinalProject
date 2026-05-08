@@ -1,0 +1,205 @@
+============================================
+Job ID:    2060666
+Task:      t4_transfer
+Node:      gpu2004.oscar.ccv.brown.edu
+Started:   Thu Apr 30 04:00:59 PM EDT 2026
+GPU: Quadro RTX 6000
+============================================
+Device: cuda
+Task: t4_transfer
+BANNER_ID: 1865415
+
+=== Frozen DINOv3 probe ===
+Downloading DINOv3 model (first time only, ~80 MB)...
+[Frozen-DINOv3] Epoch 1/15  Train: 0.739  Loss: 0.7623  Val: 0.795  Time: 16.634
+[Frozen-DINOv3] Epoch 2/15  Train: 0.813  Loss: 0.5438  Val: 0.814  Time: 14.940
+[Frozen-DINOv3] Epoch 3/15  Train: 0.834  Loss: 0.4855  Val: 0.825  Time: 15.143
+[Frozen-DINOv3] Epoch 4/15  Train: 0.842  Loss: 0.4535  Val: 0.828  Time: 15.201
+[Frozen-DINOv3] Epoch 5/15  Train: 0.850  Loss: 0.4317  Val: 0.832  Time: 15.320
+[Frozen-DINOv3] Epoch 6/15  Train: 0.855  Loss: 0.4161  Val: 0.827  Time: 15.410
+[Frozen-DINOv3] Epoch 7/15  Train: 0.856  Loss: 0.4042  Val: 0.835  Time: 15.448
+[Frozen-DINOv3] Epoch 8/15  Train: 0.860  Loss: 0.3938  Val: 0.829  Time: 15.444
+[Frozen-DINOv3] Epoch 9/15  Train: 0.864  Loss: 0.3858  Val: 0.832  Time: 15.524
+[Frozen-DINOv3] Epoch 10/15  Train: 0.864  Loss: 0.3781  Val: 0.839  Time: 15.470
+[Frozen-DINOv3] Epoch 11/15  Train: 0.868  Loss: 0.3724  Val: 0.836  Time: 15.574
+[Frozen-DINOv3] Epoch 12/15  Train: 0.872  Loss: 0.3668  Val: 0.838  Time: 15.538
+[Frozen-DINOv3] Epoch 13/15  Train: 0.871  Loss: 0.3624  Val: 0.840  Time: 15.527
+[Frozen-DINOv3] Epoch 14/15  Train: 0.873  Loss: 0.3576  Val: 0.843  Time: 15.592
+[Frozen-DINOv3] Epoch 15/15  Train: 0.875  Loss: 0.3536  Val: 0.839  Time: 15.587
+[Frozen-DINOv3] Total Time: 232.351  Average Time: 15.4900
+
+=== Frozen ResNet probe ===
+Downloading ResNet50 model (first time only)...
+[Frozen-ResNet50] Epoch 1/15  Train: 0.603  Loss: 1.0673  Val: 0.640  Time: 14.380
+[Frozen-ResNet50] Epoch 2/15  Train: 0.648  Loss: 0.9219  Val: 0.659  Time: 14.233
+[Frozen-ResNet50] Epoch 3/15  Train: 0.673  Loss: 0.8546  Val: 0.693  Time: 14.150
+[Frozen-ResNet50] Epoch 4/15  Train: 0.696  Loss: 0.8080  Val: 0.688  Time: 14.079
+[Frozen-ResNet50] Epoch 5/15  Train: 0.705  Loss: 0.7757  Val: 0.702  Time: 14.117
+[Frozen-ResNet50] Epoch 6/15  Train: 0.712  Loss: 0.7525  Val: 0.711  Time: 14.136
+[Frozen-ResNet50] Epoch 7/15  Train: 0.725  Loss: 0.7286  Val: 0.713  Time: 14.184
+[Frozen-ResNet50] Epoch 8/15  Train: 0.732  Loss: 0.7109  Val: 0.715  Time: 14.135
+[Frozen-ResNet50] Epoch 9/15  Train: 0.737  Loss: 0.6944  Val: 0.713  Time: 14.136
+[Frozen-ResNet50] Epoch 10/15  Train: 0.743  Loss: 0.6837  Val: 0.718  Time: 14.151
+[Frozen-ResNet50] Epoch 11/15  Train: 0.747  Loss: 0.6747  Val: 0.716  Time: 14.158
+[Frozen-ResNet50] Epoch 12/15  Train: 0.749  Loss: 0.6616  Val: 0.719  Time: 14.141
+[Frozen-ResNet50] Epoch 13/15  Train: 0.760  Loss: 0.6424  Val: 0.737  Time: 14.191
+[Frozen-ResNet50] Epoch 14/15  Train: 0.765  Loss: 0.6326  Val: 0.732  Time: 14.143
+[Frozen-ResNet50] Epoch 15/15  Train: 0.763  Loss: 0.6271  Val: 0.714  Time: 14.128
+[Frozen-ResNet50] Total Time: 212.462  Average Time: 14.1641
+
+=== Frozen Clip probe ===
+Downloading Clip model (first time only)...
+[Frozen-Clip] Epoch 1/15  Train: 0.809  Loss: 0.5445  Val: 0.850  Time: 36.449
+[Frozen-Clip] Epoch 2/15  Train: 0.860  Loss: 0.3895  Val: 0.851  Time: 36.579
+[Frozen-Clip] Epoch 3/15  Train: 0.872  Loss: 0.3563  Val: 0.865  Time: 36.597
+[Frozen-Clip] Epoch 4/15  Train: 0.881  Loss: 0.3329  Val: 0.870  Time: 36.602
+[Frozen-Clip] Epoch 5/15  Train: 0.887  Loss: 0.3193  Val: 0.869  Time: 36.635
+[Frozen-Clip] Epoch 6/15  Train: 0.892  Loss: 0.3059  Val: 0.873  Time: 36.644
+[Frozen-Clip] Epoch 7/15  Train: 0.896  Loss: 0.2952  Val: 0.874  Time: 36.637
+[Frozen-Clip] Epoch 8/15  Train: 0.899  Loss: 0.2859  Val: 0.864  Time: 36.572
+[Frozen-Clip] Epoch 9/15  Train: 0.901  Loss: 0.2808  Val: 0.875  Time: 36.608
+[Frozen-Clip] Epoch 10/15  Train: 0.902  Loss: 0.2748  Val: 0.878  Time: 36.667
+[Frozen-Clip] Epoch 11/15  Train: 0.905  Loss: 0.2677  Val: 0.876  Time: 36.613
+[Frozen-Clip] Epoch 12/15  Train: 0.906  Loss: 0.2657  Val: 0.880  Time: 36.557
+[Frozen-Clip] Epoch 13/15  Train: 0.908  Loss: 0.2583  Val: 0.880  Time: 36.604
+[Frozen-Clip] Epoch 14/15  Train: 0.910  Loss: 0.2531  Val: 0.875  Time: 36.619
+[Frozen-Clip] Epoch 15/15  Train: 0.912  Loss: 0.2497  Val: 0.887  Time: 36.639
+[Frozen-Clip] Total Time: 549.022  Average Time: 36.6015
+
+=== Frozen ConvNext probe ===
+Downloading ConvNext model (first time only)...
+[Frozen-ConvNext] Epoch 1/15  Train: 0.695  Loss: 0.8309  Val: 0.728  Time: 23.557
+[Frozen-ConvNext] Epoch 2/15  Train: 0.755  Loss: 0.6765  Val: 0.751  Time: 16.981
+[Frozen-ConvNext] Epoch 3/15  Train: 0.774  Loss: 0.6270  Val: 0.756  Time: 16.894
+[Frozen-ConvNext] Epoch 4/15  Train: 0.784  Loss: 0.5948  Val: 0.767  Time: 16.925
+[Frozen-ConvNext] Epoch 5/15  Train: 0.796  Loss: 0.5695  Val: 0.780  Time: 16.974
+[Frozen-ConvNext] Epoch 6/15  Train: 0.806  Loss: 0.5510  Val: 0.774  Time: 17.029
+[Frozen-ConvNext] Epoch 7/15  Train: 0.809  Loss: 0.5350  Val: 0.773  Time: 17.101
+[Frozen-ConvNext] Epoch 8/15  Train: 0.811  Loss: 0.5240  Val: 0.777  Time: 17.008
+[Frozen-ConvNext] Epoch 9/15  Train: 0.820  Loss: 0.5134  Val: 0.779  Time: 17.065
+[Frozen-ConvNext] Epoch 10/15  Train: 0.822  Loss: 0.5025  Val: 0.783  Time: 17.030
+[Frozen-ConvNext] Epoch 11/15  Train: 0.826  Loss: 0.4931  Val: 0.779  Time: 17.094
+[Frozen-ConvNext] Epoch 12/15  Train: 0.828  Loss: 0.4839  Val: 0.774  Time: 17.020
+[Frozen-ConvNext] Epoch 13/15  Train: 0.829  Loss: 0.4794  Val: 0.778  Time: 17.020
+[Frozen-ConvNext] Epoch 14/15  Train: 0.832  Loss: 0.4718  Val: 0.783  Time: 17.034
+[Frozen-ConvNext] Epoch 15/15  Train: 0.836  Loss: 0.4666  Val: 0.780  Time: 17.083
+[Frozen-ConvNext] Total Time: 261.814  Average Time: 17.4543
+
+=== LoRA DINOv3 probe ===
+Downloading DINOv3 model (first time only, ~80 MB)...
+[LoRA-DINOv3] Epoch 1/15  Train: 0.735  Loss: 0.7764  Val: 0.792  Time: 15.695
+[LoRA-DINOv3] Epoch 2/15  Train: 0.814  Loss: 0.5459  Val: 0.808  Time: 15.680
+[LoRA-DINOv3] Epoch 3/15  Train: 0.832  Loss: 0.4852  Val: 0.821  Time: 15.733
+[LoRA-DINOv3] Epoch 4/15  Train: 0.842  Loss: 0.4535  Val: 0.822  Time: 15.686
+[LoRA-DINOv3] Epoch 5/15  Train: 0.849  Loss: 0.4320  Val: 0.830  Time: 15.699
+[LoRA-DINOv3] Epoch 6/15  Train: 0.855  Loss: 0.4162  Val: 0.831  Time: 15.691
+[LoRA-DINOv3] Epoch 7/15  Train: 0.858  Loss: 0.4043  Val: 0.837  Time: 15.660
+[LoRA-DINOv3] Epoch 8/15  Train: 0.862  Loss: 0.3942  Val: 0.836  Time: 15.714
+[LoRA-DINOv3] Epoch 9/15  Train: 0.864  Loss: 0.3854  Val: 0.836  Time: 15.734
+[LoRA-DINOv3] Epoch 10/15  Train: 0.868  Loss: 0.3783  Val: 0.836  Time: 15.756
+[LoRA-DINOv3] Epoch 11/15  Train: 0.870  Loss: 0.3729  Val: 0.840  Time: 15.700
+[LoRA-DINOv3] Epoch 12/15  Train: 0.869  Loss: 0.3664  Val: 0.839  Time: 15.721
+[LoRA-DINOv3] Epoch 13/15  Train: 0.872  Loss: 0.3622  Val: 0.837  Time: 15.689
+[LoRA-DINOv3] Epoch 14/15  Train: 0.874  Loss: 0.3575  Val: 0.839  Time: 15.677
+[LoRA-DINOv3] Epoch 15/15  Train: 0.874  Loss: 0.3532  Val: 0.839  Time: 15.722
+[LoRA-DINOv3] Total Time: 235.558  Average Time: 15.7039
+
+=== LoRA Clip probe ===
+Downloading Clip model (first time only)...
+[LoRA-Clip] Epoch 1/15  Train: 0.836  Loss: 0.4727  Val: 0.867  Time: 79.252
+[LoRA-Clip] Epoch 2/15  Train: 0.917  Loss: 0.2441  Val: 0.891  Time: 79.332
+[LoRA-Clip] Epoch 3/15  Train: 0.953  Loss: 0.1504  Val: 0.906  Time: 79.296
+[LoRA-Clip] Epoch 4/15  Train: 0.977  Loss: 0.0789  Val: 0.907  Time: 79.280
+[LoRA-Clip] Epoch 5/15  Train: 0.991  Loss: 0.0369  Val: 0.908  Time: 79.290
+[LoRA-Clip] Epoch 6/15  Train: 0.998  Loss: 0.0147  Val: 0.903  Time: 79.263
+[LoRA-Clip] Epoch 7/15  Train: 0.999  Loss: 0.0073  Val: 0.904  Time: 79.227
+[LoRA-Clip] Epoch 8/15  Train: 0.999  Loss: 0.0061  Val: 0.910  Time: 79.255
+[LoRA-Clip] Epoch 9/15  Train: 1.000  Loss: 0.0040  Val: 0.904  Time: 79.267
+[LoRA-Clip] Epoch 10/15  Train: 1.000  Loss: 0.0016  Val: 0.909  Time: 79.203
+[LoRA-Clip] Epoch 11/15  Train: 1.000  Loss: 0.0008  Val: 0.908  Time: 79.202
+[LoRA-Clip] Epoch 12/15  Train: 1.000  Loss: 0.0005  Val: 0.909  Time: 79.200
+[LoRA-Clip] Epoch 13/15  Train: 1.000  Loss: 0.0004  Val: 0.907  Time: 79.183
+[LoRA-Clip] Epoch 14/15  Train: 1.000  Loss: 0.0003  Val: 0.907  Time: 79.186
+[LoRA-Clip] Epoch 15/15  Train: 1.000  Loss: 0.0003  Val: 0.907  Time: 79.199
+[LoRA-Clip] Total Time: 1188.636  Average Time: 79.2424
+
+=== Last Block DINOv3 probe ===
+Downloading DINOv3 model (first time only, ~80 MB)...
+[Last-Block-DINOv3] Epoch 1/15  Train: 0.739  Loss: 0.7611  Val: 0.804  Time: 16.687
+[Last-Block-DINOv3] Epoch 2/15  Train: 0.823  Loss: 0.5079  Val: 0.821  Time: 16.689
+[Last-Block-DINOv3] Epoch 3/15  Train: 0.843  Loss: 0.4436  Val: 0.827  Time: 16.657
+[Last-Block-DINOv3] Epoch 4/15  Train: 0.855  Loss: 0.4070  Val: 0.838  Time: 16.648
+[Last-Block-DINOv3] Epoch 5/15  Train: 0.869  Loss: 0.3790  Val: 0.844  Time: 16.658
+[Last-Block-DINOv3] Epoch 6/15  Train: 0.873  Loss: 0.3582  Val: 0.848  Time: 16.710
+[Last-Block-DINOv3] Epoch 7/15  Train: 0.881  Loss: 0.3385  Val: 0.849  Time: 16.663
+[Last-Block-DINOv3] Epoch 8/15  Train: 0.887  Loss: 0.3230  Val: 0.853  Time: 16.703
+[Last-Block-DINOv3] Epoch 9/15  Train: 0.892  Loss: 0.3076  Val: 0.855  Time: 16.691
+[Last-Block-DINOv3] Epoch 10/15  Train: 0.898  Loss: 0.2959  Val: 0.857  Time: 16.681
+[Last-Block-DINOv3] Epoch 11/15  Train: 0.903  Loss: 0.2826  Val: 0.858  Time: 16.691
+[Last-Block-DINOv3] Epoch 12/15  Train: 0.906  Loss: 0.2713  Val: 0.858  Time: 16.688
+[Last-Block-DINOv3] Epoch 13/15  Train: 0.909  Loss: 0.2609  Val: 0.860  Time: 16.701
+[Last-Block-DINOv3] Epoch 14/15  Train: 0.915  Loss: 0.2508  Val: 0.862  Time: 16.693
+[Last-Block-DINOv3] Epoch 15/15  Train: 0.919  Loss: 0.2401  Val: 0.861  Time: 16.681
+[Last-Block-DINOv3] Total Time: 250.241  Average Time: 16.6827
+
+=== Last Block ResNet probe ===
+Downloading ResNet50 model (first time only)...
+[Last-Block-ResNet50] Epoch 1/15  Train: 0.605  Loss: 1.0598  Val: 0.621  Time: 16.962
+[Last-Block-ResNet50] Epoch 2/15  Train: 0.657  Loss: 0.9031  Val: 0.680  Time: 16.735
+[Last-Block-ResNet50] Epoch 3/15  Train: 0.694  Loss: 0.8190  Val: 0.694  Time: 16.716
+[Last-Block-ResNet50] Epoch 4/15  Train: 0.714  Loss: 0.7648  Val: 0.714  Time: 16.714
+[Last-Block-ResNet50] Epoch 5/15  Train: 0.732  Loss: 0.7177  Val: 0.720  Time: 16.702
+[Last-Block-ResNet50] Epoch 6/15  Train: 0.743  Loss: 0.6794  Val: 0.723  Time: 16.712
+[Last-Block-ResNet50] Epoch 7/15  Train: 0.759  Loss: 0.6458  Val: 0.723  Time: 16.696
+[Last-Block-ResNet50] Epoch 8/15  Train: 0.773  Loss: 0.6103  Val: 0.739  Time: 16.718
+[Last-Block-ResNet50] Epoch 9/15  Train: 0.788  Loss: 0.5793  Val: 0.738  Time: 16.674
+[Last-Block-ResNet50] Epoch 10/15  Train: 0.793  Loss: 0.5620  Val: 0.732  Time: 16.713
+[Last-Block-ResNet50] Epoch 11/15  Train: 0.810  Loss: 0.5273  Val: 0.740  Time: 16.747
+[Last-Block-ResNet50] Epoch 12/15  Train: 0.815  Loss: 0.5109  Val: 0.745  Time: 16.714
+[Last-Block-ResNet50] Epoch 13/15  Train: 0.828  Loss: 0.4794  Val: 0.750  Time: 16.743
+[Last-Block-ResNet50] Epoch 14/15  Train: 0.833  Loss: 0.4697  Val: 0.746  Time: 16.730
+[Last-Block-ResNet50] Epoch 15/15  Train: 0.846  Loss: 0.4346  Val: 0.752  Time: 16.730
+[Last-Block-ResNet50] Total Time: 251.005  Average Time: 16.7336
+
+=== Last Block Clip probe ===
+Downloading Clip model (first time only)...
+[Last-Block-Clip] Epoch 1/15  Train: 0.821  Loss: 0.5110  Val: 0.877  Time: 40.894
+[Last-Block-Clip] Epoch 2/15  Train: 0.885  Loss: 0.3259  Val: 0.873  Time: 40.953
+[Last-Block-Clip] Epoch 3/15  Train: 0.912  Loss: 0.2604  Val: 0.887  Time: 41.001
+[Last-Block-Clip] Epoch 4/15  Train: 0.930  Loss: 0.2026  Val: 0.897  Time: 40.982
+[Last-Block-Clip] Epoch 5/15  Train: 0.948  Loss: 0.1584  Val: 0.888  Time: 40.992
+[Last-Block-Clip] Epoch 6/15  Train: 0.963  Loss: 0.1143  Val: 0.901  Time: 40.961
+[Last-Block-Clip] Epoch 7/15  Train: 0.978  Loss: 0.0709  Val: 0.900  Time: 41.002
+[Last-Block-Clip] Epoch 8/15  Train: 0.990  Loss: 0.0394  Val: 0.910  Time: 40.964
+[Last-Block-Clip] Epoch 9/15  Train: 0.997  Loss: 0.0195  Val: 0.899  Time: 40.928
+[Last-Block-Clip] Epoch 10/15  Train: 0.999  Loss: 0.0084  Val: 0.909  Time: 40.947
+[Last-Block-Clip] Epoch 11/15  Train: 1.000  Loss: 0.0038  Val: 0.905  Time: 40.974
+[Last-Block-Clip] Epoch 12/15  Train: 1.000  Loss: 0.0025  Val: 0.908  Time: 40.977
+[Last-Block-Clip] Epoch 13/15  Train: 1.000  Loss: 0.0018  Val: 0.909  Time: 41.162
+[Last-Block-Clip] Epoch 14/15  Train: 1.000  Loss: 0.0013  Val: 0.911  Time: 41.074
+[Last-Block-Clip] Epoch 15/15  Train: 1.000  Loss: 0.0010  Val: 0.909  Time: 40.974
+[Last-Block-Clip] Total Time: 614.785  Average Time: 40.9857
+
+=== Last Block ConvNext probe ===
+Downloading ConvNext model (first time only)...
+[Last-Block-ConvNext] Epoch 1/15  Train: 0.720  Loss: 0.7726  Val: 0.759  Time: 21.281
+[Last-Block-ConvNext] Epoch 2/15  Train: 0.795  Loss: 0.5705  Val: 0.782  Time: 20.431
+[Last-Block-ConvNext] Epoch 3/15  Train: 0.834  Loss: 0.4662  Val: 0.796  Time: 20.535
+[Last-Block-ConvNext] Epoch 4/15  Train: 0.861  Loss: 0.3897  Val: 0.812  Time: 20.378
+[Last-Block-ConvNext] Epoch 5/15  Train: 0.895  Loss: 0.3049  Val: 0.811  Time: 20.474
+[Last-Block-ConvNext] Epoch 6/15  Train: 0.926  Loss: 0.2335  Val: 0.818  Time: 20.611
+[Last-Block-ConvNext] Epoch 7/15  Train: 0.948  Loss: 0.1704  Val: 0.814  Time: 20.571
+[Last-Block-ConvNext] Epoch 8/15  Train: 0.970  Loss: 0.1141  Val: 0.816  Time: 20.480
+[Last-Block-ConvNext] Epoch 9/15  Train: 0.986  Loss: 0.0671  Val: 0.809  Time: 20.424
+[Last-Block-ConvNext] Epoch 10/15  Train: 0.995  Loss: 0.0385  Val: 0.815  Time: 20.483
+[Last-Block-ConvNext] Epoch 11/15  Train: 0.999  Loss: 0.0223  Val: 0.809  Time: 20.556
+[Last-Block-ConvNext] Epoch 12/15  Train: 1.000  Loss: 0.0127  Val: 0.818  Time: 20.631
+[Last-Block-ConvNext] Epoch 13/15  Train: 1.000  Loss: 0.0078  Val: 0.814  Time: 20.542
+[Last-Block-ConvNext] Epoch 14/15  Train: 1.000  Loss: 0.0052  Val: 0.816  Time: 20.581
+[Last-Block-ConvNext] Epoch 15/15  Train: 1.000  Loss: 0.0038  Val: 0.814  Time: 20.582
+[Last-Block-ConvNext] Total Time: 308.560  Average Time: 20.5707
+
+Task t4_transfer complete.
+============================================
+Finished:  Thu Apr 30 05:10:13 PM EDT 2026
+============================================
